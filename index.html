@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinda Madu Tasya - QA Engineer Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(34, 211, 238, 0.15);
+      border-radius: 50%;
+      top: -150px;
+      right: -100px;
+      filter: blur(60px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .hero-text h4 {
+      color: #22d3ee;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .hero-text h1 {
+      font-size: 60px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #cbd5e1;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #22d3ee;
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid #334155;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: #1e293b;
+    }
+
+    .hero-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 30px;
+      padding: 50px;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.15);
+    }
+
+    .hero-card .emoji {
+      font-size: 90px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 60px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 24px;
+      padding: 35px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #22d3ee;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #22d3ee;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      color: #e2e8f0;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .timeline-item {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 24px;
+      padding: 35px;
+    }
+
+    .timeline-item h3 {
+      color: #22d3ee;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item span {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .timeline-item ul {
+      margin-top: 20px;
+      padding-left: 20px;
+      color: #cbd5e1;
+    }
+
+    .timeline-item li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #1e293b;
+      color: #94a3b8;
+    }
+
+    @media(max-width: 768px) {
+      .hero-text h1 {
+        font-size: 42px;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .hero-card {
+        padding: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container hero">
+
+      <div class="hero-text">
+        <h4>QA Engineer Portfolio</h4>
+
+        <h1>Dinda Madu Tasya</h1>
+
+        <p>
+          Manual Quality Assurance professional experienced in web and mobile application testing for banking and digital platforms.
+          Passionate about delivering secure, reliable, and user-focused software.
+        </p>
+
+        <div class="btn-group">
+          <a href="mailto:dindatasya43@gmail.com" class="btn btn-primary">Contact Me</a>
+
+          <a href="https://www.linkedin.com/in/dindatasya/" target="_blank" class="btn btn-outline">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="emoji">💻</div>
+        <h2>Manual QA Engineer</h2>
+        <p>Web • Mobile • Banking Systems</p>
+      </div>
+
+    </div>
+  </header>
+
+
+  <section>
+    <div class="container grid-2">
+
+      <div class="card">
+        <h3>About Me</h3>
+
+        <p>
+          I am a Quality Assurance professional currently working as Manual QA at Bank BRI since January 2024.
+          Experienced in frontend and backend testing, validating secure transactions,
+          creating test cases, and collaborating closely with developers.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Technical Skills</h3>
+
+        <div class="skills">
+          <div class="skill">Manual Testing</div>
+          <div class="skill">Web Testing</div>
+          <div class="skill">Mobile Testing</div>
+          <div class="skill">Regression Testing</div>
+          <div class="skill">Functional Testing</div>
+          <div class="skill">JIRA</div>
+          <div class="skill">Confluence</div>
+          <div class="skill">Postman</div>
+          <div class="skill">DBeaver</div>
+          <div class="skill">SQL</div>
+          <div class="skill">UAT</div>
+          <div class="skill">Defect Tracking</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+
+      <h2 class="section-title">Projects</h2>
+
+      <div class="grid-2">
+
+        <div class="card">
+          <h3>QLola</h3>
+          <p>
+            Integrated corporate digital platform providing secure financial services.
+            Performed web & mobile manual testing for User and Bank Admin roles.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>PalmPayment</h3>
+          <p>
+            Biometric payment system using palm recognition integrated with BRImo.
+            Tested authentication, transactions, and backend integration.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Microsite Event BRI</h3>
+          <p>
+            Event management platform for admins and participants.
+            Tested event creation, QR validation, and participant flows.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Payment Integration Miniprogram</h3>
+          <p>
+            BRImo feature connected with partner apps such as SayurBox and Ultravoucher.
+            Validated ordering, payment, and confirmation flows.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+
+      <h2 class="section-title">Work Experience</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <h3>Associate IT - Project Officer 1</h3>
+          <span>PT. Bank Rakyat Indonesia - PT. Satkomindo Mediyasa | Jan 2024 - Present</span>
+
+          <ul>
+            <li>Created test scenarios and detailed test cases.</li>
+            <li>Performed frontend and backend banking application testing.</li>
+            <li>Reported and verified defects with developers.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Quality Assurance Technician</h3>
+          <span>PT. Surya Teknologi Batam | Mar 2022 - Mar 2023</span>
+
+          <ul>
+            <li>Ensured product quality based on IPC620 standards.</li>
+            <li>Prepared monthly quality reports.</li>
+            <li>Coordinated issue resolution and quality improvement.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container grid-2">
+
+      <div class="card">
+        <h3>Education</h3>
+
+        <p>
+          <strong>Alterra Academy</strong><br>
+          Quality Assurance Bootcamp<br><br>
+
+          <strong>Padang State Polytechnic</strong><br>
+          Diploma III of Electronics Engineering
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Languages & Certification</h3>
+
+        <p>
+          Bahasa Indonesia (Native)<br>
+          English (Professional Working Proficiency)<br><br>
+
+          TOEFL Certification - Kingdom English Course
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© 2026 Dinda Madu Tasya - QA Engineer Portfolio</p>
+  </footer>
+
+</body>
+</html>
